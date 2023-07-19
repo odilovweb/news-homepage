@@ -1,49 +1,125 @@
-*,*::after,*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *:focus {
-    // outline: ;
-    // outline-offset: ;
+  // outline: ;
+  // outline-offset: ;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-    height: 100%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  height: 100%;
 }
 
 img {
-    display: flex;
-    object-fit: cover; /* contain */
+  display: flex;
+  object-fit: cover; /* contain */
 }
 
 a {
-    text-decoration: none;
-    display: inline-block;
+  text-decoration: none;
+  display: inline-block;
 }
 
-ul,ol {
-    list-style: none;
+ul,
+ol {
+  list-style: none;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: $main-ff;
+  color: $gunmetal-color;
+  font-size: $main-text-fs;
+  line-height: $main-text-lh;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px; // *
-    margin-left: auto;
+  width: 100%;
+  max-width: 1210px; // *
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem; // *
+  padding-right: 5rem; // *
+}
+h1 {
+  font-size: $h1-fs;
+  line-height: $h1-lh;
+  font-weight: $h1-fw;
+}
+h2 {
+  font-size: $h2-fs;
+  line-height: $h2-lh;
+  font-weight: $h2-fw;
+}
+h3 {
+  font-size: $h3-fs;
+  line-height: $h3-lh;
+  font-weight: $h3-fw;
+  color: $silver-color;
+}
+h4 {
+  font-size: $h4-fs;
+  line-height: $h4-lh;
+  font-weight: $h4-fw;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    padding-top: 8.9rem;
+    padding-bottom: 5.5rem;
+    ul {
+        display: flex;
+        gap: 4rem;
+        a {
+            color: $gunmetal-color;
+            &:hover{
+                color: $light-vermillion;
+            }
+        }
+    }
+}
+.btn {
+    border: 0;
+    background: inherit;
+}
+.header-logo-link{
     margin-right: auto;
-    padding-left: 5rem; // *
-    padding-right: 5rem;// *
+}
+.header-btn{
+    display: none;
+}
+@media only screen and (max-width:970px){
+    .header-container{
+        padding-top: 2.8rem;
+    }
+    a {
+        width: 45px;
+        height: 28px;
+    }
+    .header-container {
+nav {
+    display: none;
+}
+button {
+    display: block;
+}
+    }
 }
